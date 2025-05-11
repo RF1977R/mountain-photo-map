@@ -13,7 +13,7 @@ st.set_page_config(layout="wide")
 st.title("写真付き登山ルートビューワー")
 
 uploaded_gpx = st.file_uploader("GPXファイルを選択", type="gpx")
-uploaded_photos = st.file_uploader("写真を選択（複数可）", type=["jpg", "jpeg"], accept_multiple_files=True)
+uploaded_photos = st.file_uploader("写真を選択（複数可）", type=["jpg", "jpeg","JPG","JPEG"], accept_multiple_files=True)
 
 def get_gps_from_exif(img_file):
     tags = exifread.process_file(img_file, details=False)
